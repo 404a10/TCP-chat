@@ -22,4 +22,4 @@ The broadcast function is also defined here.
 
 ### The server object
 This file defines the server as the rooms on that server and the commands sent to it.
-In here is written how the server should serve the clients and the functions of the commands.
+In here is written how the server should serve the clients and the functions of the commands are defined.
