@@ -1,7 +1,13 @@
 package main
 
+import (
+	"log"
+	"net"
+)
+
 func main() {
 	s := newServer()
+	go s.run()
 
 	listener, err := net.Listen("tcp", ":8888")
 	if err != nil {
@@ -17,6 +23,8 @@ func main() {
 			continue
 		}
 
-		go s.newClient(conn)
+
+		c := s.newClient(conn)
+		go c.readInput()
 	}
 }
